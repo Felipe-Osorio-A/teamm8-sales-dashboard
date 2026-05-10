@@ -9,6 +9,7 @@
     :root{
       --navy:#1B2B3A;--navy2:#243649;--navy3:#2D4560;
       --gold:#C8A96E;--gold2:#A8893E;--gold3:#E2CFA0;--gold4:#F5EDD8;
+      --teal:#4A8C8C;--teal2:#3A6E6E;
       --cream:#F5F0E8;--cream2:#EDE6D8;--white:#FDFAF5;
       --text:#1B2B3A;--mid:#4A5A6A;
     }
@@ -16,7 +17,6 @@
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--cream);color:var(--text);font-size:15px;line-height:1.6}
     a{color:var(--gold2);text-decoration:none}
 
-    /* ── HEADER ── */
     .header{background:var(--navy);padding:36px 0 32px;position:relative;overflow:hidden}
     .header::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(200,169,110,0.08) 0%,transparent 70%);pointer-events:none}
     .header-inner{max-width:1100px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
@@ -26,72 +26,49 @@
     .header-sub{font-size:0.85rem;color:rgba(253,250,245,0.45);margin-top:6px}
     .header-generated{font-size:0.78rem;color:rgba(253,250,245,0.28);text-align:right;padding-top:4px}
 
-    /* ── LAYOUT ── */
     .wrap{max-width:1100px;margin:0 auto;padding:0 28px}
     .section{padding:40px 0}
     .section-title{font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:20px}
 
-    /* ── METRIC CARDS ── */
-    .metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}
+    /* METRIC CARDS */
+    .metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
     .card{background:var(--white);border:1px solid var(--cream2);border-radius:10px;padding:24px 22px;position:relative;overflow:hidden}
     .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
     .card-dark{background:var(--navy);border-color:var(--navy3)}
-    .card-dark::before{background:linear-gradient(90deg,var(--gold),rgba(200,169,110,0.4))}
-    .card-label{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px}
-    .card-dark .card-label{color:rgba(253,250,245,0.4)}
-    .card-value{font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;color:var(--text);line-height:1.1}
+    .card-dark::before{background:linear-gradient(90deg,var(--gold),rgba(200,169,110,0.35))}
+    .card-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:10px}
+    .card-dark .card-label{color:rgba(253,250,245,0.38)}
+    .card-value{font-size:clamp(1.45rem,2.5vw,1.95rem);font-weight:700;color:var(--text);line-height:1.1}
     .card-dark .card-value{color:var(--white)}
-    .card-sub{font-size:0.78rem;color:var(--mid);margin-top:6px}
-    .card-dark .card-sub{color:rgba(253,250,245,0.4)}
-    .card-split{margin-top:10px;display:flex;gap:16px}
-    .card-split-item{flex:1}
-    .card-split-label{font-size:0.68rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(253,250,245,0.35);margin-bottom:3px}
-    .card-split-val{font-size:0.92rem;font-weight:700;color:var(--white)}
+    .card-sub{font-size:0.76rem;color:var(--mid);margin-top:7px;line-height:1.5}
+    .card-dark .card-sub{color:rgba(253,250,245,0.38)}
 
-    /* ── STORE COMPARISON ── */
-    .stores-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
-    .store-card{background:var(--white);border:1px solid var(--cream2);border-radius:10px;padding:24px 22px}
-    .store-card-head{display:flex;align-items:center;gap:10px;margin-bottom:18px}
-    .store-badge{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;background:var(--gold4);color:var(--gold2)}
-    .store-name{font-weight:700;font-size:1rem;color:var(--text)}
-    .store-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .store-stat-label{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);margin-bottom:3px}
-    .store-stat-val{font-size:1.1rem;font-weight:700;color:var(--text)}
-
-    /* ── TABLES ── */
+    /* TABLES */
     .table-card{background:var(--white);border:1px solid var(--cream2);border-radius:10px;overflow:hidden;margin-bottom:24px}
     .table-head{padding:20px 24px 14px;border-bottom:1px solid var(--cream2)}
     .table-head-title{font-weight:700;font-size:1rem;color:var(--text)}
     .table-head-sub{font-size:0.78rem;color:var(--mid);margin-top:2px}
     table{width:100%;border-collapse:collapse}
-    th{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);padding:10px 16px;text-align:left;background:var(--cream);border-bottom:1px solid var(--cream2)}
+    th{font-size:0.67rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);padding:10px 16px;text-align:left;background:var(--cream);border-bottom:1px solid var(--cream2)}
     td{padding:11px 16px;border-bottom:1px solid var(--cream2);font-size:0.88rem;vertical-align:middle}
     tr:last-child td{border-bottom:none}
     tr:hover td{background:var(--cream)}
     .rank{font-weight:700;color:var(--gold2);width:36px;text-align:center}
-    .prod-name,.country-name{font-weight:600;color:var(--text);max-width:240px}
+    .td-name{font-weight:600;color:var(--text);max-width:220px}
     .num{text-align:right;font-variant-numeric:tabular-nums;color:var(--mid)}
     .money{font-weight:700;color:var(--text)}
-    .bar-cell{width:180px}
-    .bar-wrap{background:var(--cream2);border-radius:3px;height:8px;overflow:hidden}
-    .bar{background:linear-gradient(90deg,var(--navy),var(--navy3));height:8px;border-radius:3px;transition:width 0.4s}
+    .bar-cell{width:160px}
+    .bar-wrap{background:var(--cream2);border-radius:3px;height:7px;overflow:hidden}
+    .bar{background:linear-gradient(90deg,var(--navy),var(--navy3));height:7px;border-radius:3px}
     .bar-gold{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+    .bar-teal{background:linear-gradient(90deg,var(--teal),var(--teal2))}
 
-    /* ── TWO-COL ── */
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 
-    /* ── FOOTER ── */
     .footer{border-top:1px solid var(--cream2);padding:24px 0;text-align:center;font-size:0.78rem;color:var(--mid)}
 
-    @media(max-width:900px){
-      .metrics-grid{grid-template-columns:1fr 1fr}
-      .two-col{grid-template-columns:1fr}
-      .stores-grid{grid-template-columns:1fr}
-    }
-    @media(max-width:540px){
-      .metrics-grid{grid-template-columns:1fr}
-      .bar-cell{display:none}
-    }
+    @media(max-width:900px){.metrics-grid{grid-template-columns:1fr 1fr}.two-col{grid-template-columns:1fr}}
+    @media(max-width:540px){.metrics-grid{grid-template-columns:1fr}.bar-cell{display:none}}
   </style>
 </head>
 <body>
@@ -104,97 +81,144 @@
         <div class="header-title">4 May 2026 – 11 May 2026</div>
         <div class="header-sub">AU Store + INTL Store combined</div>
       </div>
-      <div class="header-generated">Generated 11 May 2026, 9:01 am<br><a href="https://felipe-osorio-a.github.io/teamm8-sales-dashboard/" style="color:rgba(200,169,110,0.6);font-size:0.72rem">view latest →</a></div>
+      <div class="header-generated">Generated 11 May 2026, 9:13 am<br><a href="https://felipe-osorio-a.github.io/teamm8-sales-dashboard/" style="color:rgba(200,169,110,0.55);font-size:0.72rem">view latest →</a></div>
     </div>
   </div>
 </div>
 
 <div class="wrap">
 
-  <!-- ── KEY METRICS ── -->
+  <!-- KEY METRICS — combined only -->
   <div class="section">
     <div class="section-title">This week at a glance</div>
     <div class="metrics-grid">
 
       <div class="card card-dark">
-        <div class="card-label">Net Sales</div>
+        <div class="card-label">Net Sales — AU</div>
         <div class="card-value">A$34,461.24</div>
-        <div class="card-sub">AUD &nbsp;·&nbsp; AU Store</div>
-        <div class="card-split">
-          <div class="card-split-item">
-            <div class="card-split-label">INTL</div>
-            <div class="card-split-val">US$51,944.32</div>
-          </div>
-          <div class="card-split-item">
-            <div class="card-split-label">Refunds</div>
-            <div class="card-split-val">$701.95</div>
-          </div>
-        </div>
+        <div class="card-sub">AUD &nbsp;·&nbsp; 234 orders</div>
+      </div>
+
+      <div class="card card-dark">
+        <div class="card-label">Net Sales — INTL</div>
+        <div class="card-value">US$51,618.61</div>
+        <div class="card-sub">USD &nbsp;·&nbsp; 293 orders</div>
       </div>
 
       <div class="card">
         <div class="card-label">Total Orders</div>
-        <div class="card-value">528</div>
-        <div class="card-sub">AU: 234 &nbsp;·&nbsp; INTL: 294</div>
+        <div class="card-value">527</div>
+        <div class="card-sub">Both stores combined</div>
       </div>
 
       <div class="card">
         <div class="card-label">Avg Order Value</div>
         <div class="card-value">A$147.27</div>
-        <div class="card-sub">AU &nbsp;·&nbsp; INTL: US$176.68</div>
-      </div>
-
-      <div class="card">
-        <div class="card-label">Refunds</div>
-        <div class="card-value">$701.95</div>
-        <div class="card-sub">AU: A$356.65 &nbsp;·&nbsp; INTL: US$345.30</div>
+        <div class="card-sub">AU &nbsp;·&nbsp; INTL: US$176.17<br>Refunds: $701.95</div>
       </div>
 
     </div>
 
-    <!-- ── STORE COMPARISON ── -->
-    <div class="section-title">Store breakdown</div>
-    <div class="stores-grid">
-      <div class="store-card">
-        <div class="store-card-head">
-          <span style="font-size:1.5rem">🇦🇺</span>
-          <div><div class="store-name">AU Store</div><div style="font-size:0.75rem;color:var(--mid)">teamm8.myshopify.com</div></div>
-          <div class="store-badge">AUD</div>
-        </div>
-        <div class="store-stats">
-          <div><div class="store-stat-label">Net Sales</div><div class="store-stat-val">A$34,461.24</div></div>
-          <div><div class="store-stat-label">Orders</div><div class="store-stat-val">234</div></div>
-          <div><div class="store-stat-label">AOV</div><div class="store-stat-val">A$147.27</div></div>
-          <div><div class="store-stat-label">Refunds</div><div class="store-stat-val">A$356.65</div></div>
-        </div>
+    <!-- SALES CHANNELS — full width -->
+    <div class="section-title">Net sales by channel</div>
+    <div class="table-card" style="margin-bottom:48px">
+      <div class="table-head">
+        <div class="table-head-title">Where revenue came from</div>
+        <div class="table-head-sub">Both stores combined · ranked by revenue</div>
       </div>
-      <div class="store-card">
-        <div class="store-card-head">
-          <span style="font-size:1.5rem">🌏</span>
-          <div><div class="store-name">INTL Store</div><div style="font-size:0.75rem;color:var(--mid)">teamm8-world-wide.myshopify.com</div></div>
-          <div class="store-badge">USD</div>
-        </div>
-        <div class="store-stats">
-          <div><div class="store-stat-label">Net Sales</div><div class="store-stat-val">US$51,944.32</div></div>
-          <div><div class="store-stat-label">Orders</div><div class="store-stat-val">294</div></div>
-          <div><div class="store-stat-label">AOV</div><div class="store-stat-val">US$176.68</div></div>
-          <div><div class="store-stat-label">Refunds</div><div class="store-stat-val">US$345.30</div></div>
-        </div>
-      </div>
+      <table>
+        <thead><tr>
+          <th>#</th><th>Channel</th>
+          <th style="text-align:right">Orders</th>
+          <th>Revenue share</th>
+          <th style="text-align:right">Net Sales</th>
+        </tr></thead>
+        <tbody>
+    <tr>
+      <td class="rank">1</td>
+      <td class="td-name">Online Store</td>
+      <td class="num">381 <span style="color:var(--mid);font-weight:400">(72%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:100%"></div></div></td>
+      <td class="num money">$58,204.68</td>
+    </tr>
+    <tr>
+      <td class="rank">2</td>
+      <td class="td-name">Draft Orders</td>
+      <td class="num">9 <span style="color:var(--mid);font-weight:400">(2%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:20%"></div></div></td>
+      <td class="num money">$11,917.70</td>
+    </tr>
+    <tr>
+      <td class="rank">3</td>
+      <td class="td-name">Point of Sale</td>
+      <td class="num">55 <span style="color:var(--mid);font-weight:400">(10%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:14%"></div></div></td>
+      <td class="num money">$8,058.80</td>
+    </tr>
+    <tr>
+      <td class="rank">4</td>
+      <td class="td-name">faire</td>
+      <td class="num">1 <span style="color:var(--mid);font-weight:400">(0%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:5%"></div></div></td>
+      <td class="num money">$3,069.76</td>
+    </tr>
+    <tr>
+      <td class="rank">5</td>
+      <td class="td-name">3890849</td>
+      <td class="num">11 <span style="color:var(--mid);font-weight:400">(2%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:3%"></div></div></td>
+      <td class="num money">$1,865.00</td>
+    </tr>
+    <tr>
+      <td class="rank">6</td>
+      <td class="td-name">IDAConnect App</td>
+      <td class="num">20 <span style="color:var(--mid);font-weight:400">(4%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:2%"></div></div></td>
+      <td class="num money">$1,337.48</td>
+    </tr>
+    <tr>
+      <td class="rank">7</td>
+      <td class="td-name">shopify-collective-automatic-payments</td>
+      <td class="num">31 <span style="color:var(--mid);font-weight:400">(6%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:2%"></div></div></td>
+      <td class="num money">$1,017.73</td>
+    </tr>
+    <tr>
+      <td class="rank">8</td>
+      <td class="td-name">Marketplacer</td>
+      <td class="num">11 <span style="color:var(--mid);font-weight:400">(2%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:1%"></div></div></td>
+      <td class="num money">$564.00</td>
+    </tr>
+    <tr>
+      <td class="rank">9</td>
+      <td class="td-name">3385147</td>
+      <td class="num">6 <span style="color:var(--mid);font-weight:400">(1%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:0%"></div></div></td>
+      <td class="num money">$44.70</td>
+    </tr>
+    <tr>
+      <td class="rank">10</td>
+      <td class="td-name">2775569</td>
+      <td class="num">2 <span style="color:var(--mid);font-weight:400">(0%)</span></td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-teal" style="width:0%"></div></div></td>
+      <td class="num money">$0.00</td>
+    </tr></tbody>
+      </table>
     </div>
+
   </div>
 
-  <!-- ── TWO COLUMN: PRODUCTS + COUNTRIES ── -->
+  <!-- PRODUCTS + COUNTRIES -->
   <div class="section" style="padding-top:0">
     <div class="two-col">
 
-      <!-- TOP 10 PRODUCTS -->
       <div>
         <div class="section-title">Top 10 products</div>
         <div class="table-card">
           <div class="table-head">
             <div class="table-head-title">Best sellers this week</div>
-            <div class="table-head-sub">Ranked by revenue · both stores combined</div>
+            <div class="table-head-sub">Ranked by revenue · both stores · gifts excluded</div>
           </div>
           <table>
             <thead><tr>
@@ -204,119 +228,78 @@
             <tbody>
     <tr>
       <td class="rank">1</td>
-      <td class="prod-name">TEAMM8 Classic Tote Bag - Navy</td>
-      <td class="num">111</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:100%"></div>
-        </div>
-      </td>
-      <td class="num money">$3,920.80</td>
+      <td class="td-name">TEAMM8 Classic Tote Bag - Navy</td>
+      <td class="num">110</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:100%"></div></div></td>
+      <td class="num money">$3,885.80</td>
     </tr>
     <tr>
       <td class="rank">2</td>
-      <td class="prod-name">Romeo Sheer Bikini Brief - Noir - M</td>
+      <td class="td-name">Romeo Sheer Bikini Brief - Noir - M</td>
       <td class="num">24</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:26%"></div>
-        </div>
-      </td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:26%"></div></div></td>
       <td class="num money">$1,005.38</td>
     </tr>
     <tr>
       <td class="rank">3</td>
-      <td class="prod-name">TEAMM8 Signature Tote Bag - Sage</td>
+      <td class="td-name">TEAMM8 Signature Tote Bag - Sage</td>
       <td class="num">26</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:23%"></div>
-        </div>
-      </td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:23%"></div></div></td>
       <td class="num money">$893.55</td>
     </tr>
     <tr>
       <td class="rank">4</td>
-      <td class="prod-name">Romeo Sheer Bikini Brief - Cherry - M</td>
+      <td class="td-name">Romeo Sheer Bikini Brief - Cherry - M</td>
       <td class="num">18</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:20%"></div>
-        </div>
-      </td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:20%"></div></div></td>
       <td class="num money">$767.36</td>
     </tr>
     <tr>
       <td class="rank">5</td>
-      <td class="prod-name">Pace 2.5&quot; Short - Black - S</td>
+      <td class="td-name">Pace 2.5&quot; Short - Black - S</td>
       <td class="num">9</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:17%"></div>
-        </div>
-      </td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:17%"></div></div></td>
       <td class="num money">$657.94</td>
     </tr>
     <tr>
       <td class="rank">6</td>
-      <td class="prod-name">M.V.P. Retro 2.5&quot; Short - Forest - S</td>
+      <td class="td-name">M.V.P. Retro 2.5&quot; Short - Forest - S</td>
       <td class="num">13</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:16%"></div>
-        </div>
-      </td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:16%"></div></div></td>
       <td class="num money">$621.60</td>
     </tr>
     <tr>
       <td class="rank">7</td>
-      <td class="prod-name">Pace 2.5&quot; Short - Black - M</td>
+      <td class="td-name">Pace 2.5&quot; Short - Black - M</td>
       <td class="num">8</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:15%"></div>
-        </div>
-      </td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:15%"></div></div></td>
       <td class="num money">$593.22</td>
     </tr>
     <tr>
       <td class="rank">8</td>
-      <td class="prod-name">Pace 2.5&quot; Short - Black - XS</td>
+      <td class="td-name">Pace 2.5&quot; Short - Black - XS</td>
       <td class="num">7</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:13%"></div>
-        </div>
-      </td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:14%"></div></div></td>
       <td class="num money">$525.00</td>
     </tr>
     <tr>
       <td class="rank">9</td>
-      <td class="prod-name">Pace 2.5&quot; Short - Ecru - M</td>
+      <td class="td-name">Pace 2.5&quot; Short - Ecru - M</td>
       <td class="num">7</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:13%"></div>
-        </div>
-      </td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:13%"></div></div></td>
       <td class="num money">$499.56</td>
     </tr>
     <tr>
       <td class="rank">10</td>
-      <td class="prod-name">Statement Swim Short - Black - M</td>
+      <td class="td-name">Statement Swim Short - Black - M</td>
       <td class="num">5</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar" style="width:13%"></div>
-        </div>
-      </td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar" style="width:13%"></div></div></td>
       <td class="num money">$495.00</td>
     </tr></tbody>
           </table>
         </div>
       </div>
 
-      <!-- TOP 10 COUNTRIES -->
       <div>
         <div class="section-title">Top 10 countries</div>
         <div class="table-card">
@@ -332,112 +315,72 @@
             <tbody>
     <tr>
       <td class="rank">1</td>
-      <td class="country-name">🇺🇸 United States</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:100%"></div>
-        </div>
-      </td>
-      <td class="num">206 orders</td>
-      <td class="num money">$37,475.86</td>
+      <td class="td-name">🇺🇸 United States</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:100%"></div></div></td>
+      <td class="num">205</td>
+      <td class="num money">$37,150.15</td>
     </tr>
     <tr>
       <td class="rank">2</td>
-      <td class="country-name">🇦🇺 Australia</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:80%"></div>
-        </div>
-      </td>
-      <td class="num">165 orders</td>
+      <td class="td-name">🇦🇺 Australia</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:80%"></div></div></td>
+      <td class="num">165</td>
       <td class="num money">$21,344.44</td>
     </tr>
     <tr>
       <td class="rank">3</td>
-      <td class="country-name">🌐 Unknown</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:27%"></div>
-        </div>
-      </td>
-      <td class="num">55 orders</td>
+      <td class="td-name">🌐 Unknown</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:27%"></div></div></td>
+      <td class="num">55</td>
       <td class="num money">$8,058.80</td>
     </tr>
     <tr>
       <td class="rank">4</td>
-      <td class="country-name">🇨🇦 Canada</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:17%"></div>
-        </div>
-      </td>
-      <td class="num">34 orders</td>
+      <td class="td-name">🇨🇦 Canada</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:17%"></div></div></td>
+      <td class="num">34</td>
       <td class="num money">$4,981.39</td>
     </tr>
     <tr>
       <td class="rank">5</td>
-      <td class="country-name">🇬🇧 United Kingdom</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:7%"></div>
-        </div>
-      </td>
-      <td class="num">14 orders</td>
+      <td class="td-name">🇬🇧 United Kingdom</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:7%"></div></div></td>
+      <td class="num">14</td>
       <td class="num money">$5,409.64</td>
     </tr>
     <tr>
       <td class="rank">6</td>
-      <td class="country-name">🇳🇿 New Zealand</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:6%"></div>
-        </div>
-      </td>
-      <td class="num">13 orders</td>
+      <td class="td-name">🇳🇿 New Zealand</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:6%"></div></div></td>
+      <td class="num">13</td>
       <td class="num money">$1,988.24</td>
     </tr>
     <tr>
       <td class="rank">7</td>
-      <td class="country-name">🇲🇽 Mexico</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:4%"></div>
-        </div>
-      </td>
-      <td class="num">8 orders</td>
+      <td class="td-name">🇲🇽 Mexico</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:4%"></div></div></td>
+      <td class="num">8</td>
       <td class="num money">$1,915.82</td>
     </tr>
     <tr>
       <td class="rank">8</td>
-      <td class="country-name">🇸🇬 Singapore</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:4%"></div>
-        </div>
-      </td>
-      <td class="num">8 orders</td>
+      <td class="td-name">🇸🇬 Singapore</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:4%"></div></div></td>
+      <td class="num">8</td>
       <td class="num money">$1,165.88</td>
     </tr>
     <tr>
       <td class="rank">9</td>
-      <td class="country-name">🇩🇪 Germany</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:3%"></div>
-        </div>
-      </td>
-      <td class="num">7 orders</td>
+      <td class="td-name">🇩🇪 Germany</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:3%"></div></div></td>
+      <td class="num">7</td>
       <td class="num money">$743.64</td>
     </tr>
     <tr>
       <td class="rank">10</td>
-      <td class="country-name">🇳🇱 Netherlands</td>
-      <td class="bar-cell">
-        <div class="bar-wrap">
-          <div class="bar bar-gold" style="width:2%"></div>
-        </div>
-      </td>
-      <td class="num">5 orders</td>
+      <td class="td-name">🇳🇱 Netherlands</td>
+      <td class="bar-cell"><div class="bar-wrap"><div class="bar bar-gold" style="width:2%"></div></div></td>
+      <td class="num">5</td>
       <td class="num money">$721.96</td>
     </tr></tbody>
           </table>
@@ -450,9 +393,7 @@
 </div>
 
 <div class="footer">
-  <div class="wrap">
-    TEAMM8 internal dashboard &nbsp;·&nbsp; 4 May 2026 – 11 May 2026 &nbsp;·&nbsp; generated 11 May 2026, 9:01 am
-  </div>
+  <div class="wrap">TEAMM8 internal dashboard &nbsp;·&nbsp; 4 May 2026 – 11 May 2026 &nbsp;·&nbsp; generated 11 May 2026, 9:13 am</div>
 </div>
 
 </body></html>
